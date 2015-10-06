@@ -1,7 +1,7 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-resource_reference_syntax'
-  spec.version     = '1.0.0'
-  spec.homepage    = 'https://github.com/tuxmea/puppetlint-variablecase'
+  spec.version     = '1.0.1'
+  spec.homepage    = 'https://github.com/tuxmea/puppet-lint-resource_reference_syntax'
   spec.license     = 'APL2'
   spec.author      = 'Martin Alfke'
   spec.email       = 'ma@example42.com'
