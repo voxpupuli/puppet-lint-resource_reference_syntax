@@ -31,7 +31,7 @@ ERROR: whitespce between reference type and title on line 4
 
 **--fix support: No**
 
-This check will raise an error for any resource reference that uses the title with capital letter.
+This check will raise an error for any resource reference that uses the title with capital letter without enclosed quotes.
 
 ```
 ERROR: resource reference with title with capital letter on line 4
