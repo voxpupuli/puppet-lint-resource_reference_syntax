@@ -12,8 +12,15 @@ describe 'resource_reference_without_title_capital' do
   end
 
   context 'a proper reference in quotes' do
-    let(:msg) { 'whitespce between reference type and title' }
     let(:code) { "file { 'foo': ensure => file, notify => Title['One'],}" }
+
+    it 'should detect no problem' do
+      expect(problems).to have(0).problem
+    end
+  end
+
+  context 'a proper reference as variable' do
+    let(:code) { "file { 'foo': ensure => file, notify => Title[$foo_var],}" }
 
     it 'should detect no problem' do
       expect(problems).to have(0).problem
