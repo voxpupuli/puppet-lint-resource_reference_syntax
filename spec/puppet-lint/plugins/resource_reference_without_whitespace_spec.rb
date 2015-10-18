@@ -13,7 +13,7 @@ describe 'resource_reference_without_whitespace' do
 
   context 'a whitespace between reference and bracket' do
     let(:msg) { 'whitespce between reference type and title' }
-    let(:code) { "file { 'foo': ensure => file, notify => Title ['one'],}" }
+    let(:code) { "file { 'foo': ensure => file, consume => Title ['one'],}" }
 
     it 'should only detect a single problem' do
       expect(problems).to have(1).problem
