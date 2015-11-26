@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-resource_reference_syntax'
-  spec.version     = '1.0.4'
+  spec.version     = '1.0.5'
   spec.homepage    = 'https://github.com/tuxmea/puppet-lint-resource_reference_syntax'
   spec.license     = 'APL2'
   spec.author      = 'Martin Alfke'
@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.files       = Dir[
     'README.md',
     'LICENSE',
+    '.rspec',
     'lib/**/*',
     'spec/**/*',
   ]

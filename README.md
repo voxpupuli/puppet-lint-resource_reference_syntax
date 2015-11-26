@@ -23,6 +23,13 @@ This plugin provides two new checks to `puppet-lint`.
 This check will raise an error for any resource reference that has a whitespace
 between the Type reference and the opening bracket.
 
+e.g. the following code is NOT good for Puppet 4:
+
+```
+  require => File ['/etc/motd']
+```
+and will result in the following error:
+
 ```
 ERROR: whitespce between reference type and title on line 4
 ```
@@ -33,7 +40,22 @@ ERROR: whitespce between reference type and title on line 4
 
 This check will raise an error for any resource reference that uses the title with capital letter without enclosed quotes.
 
+e.g. the following code will not work on Puppet 4:
+```
+  require => Service[Apache],
+  require => Service[Apache, Mysql],
+  require => Service[apache]
+```
+and will result in the following error:
 ```
 ERROR: resource reference with title with capital letter on line 4
+```
+
+The following references are good code for Puppet 4:
+
+```
+  require => Service['apache'],
+  require => Service['apache', 'mysql'], 
+  require => [ Service['apache'], Service['mysql'] ],
 ```
 

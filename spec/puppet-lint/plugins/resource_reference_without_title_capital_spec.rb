@@ -19,6 +19,22 @@ describe 'resource_reference_without_title_capital' do
     end
   end
 
+  context 'a proper reference as array in quotes' do
+    let(:code) { "file { 'foo': ensure => file, notify => Title['one', 'two'],}" }
+
+    it 'should detect no problem' do
+      expect(problems).to have(0).problem
+    end
+  end
+
+  context 'multiple proper references as array in quotes' do
+    let(:code) { "file { 'foo': ensure => file, notify => [ Title['one'], Title['two'] ],}" }
+
+    it 'should detect no problem' do
+      expect(problems).to have(0).problem
+    end
+  end
+
   context 'a proper reference as variable' do
     let(:code) { "file { 'foo': ensure => file, notify => Title[$foo_var],}" }
 
@@ -30,6 +46,32 @@ describe 'resource_reference_without_title_capital' do
   context 'resource reference with title as capital letter' do
     let(:msg) { 'resource reference with title with capital letter' }
     let(:code) { "file { 'foo': ensure => file, notify => Title[One],}" }
+
+    it 'should only detect a single problem' do
+      expect(problems).to have(1).problem
+    end
+
+    it 'should create an error' do
+      expect(problems).to contain_error(msg).on_line(1)
+    end
+  end
+
+  context 'resource reference with title as array of capital letters' do
+    let(:msg) { 'resource reference with title with capital letter' }
+    let(:code) { "file { 'foo': ensure => file, notify => Title[One, Two],}" }
+
+    it 'should only detect a single problem' do
+      expect(problems).to have(1).problem
+    end
+
+    it 'should create an error' do
+      expect(problems).to contain_error(msg).on_line(1)
+    end
+  end
+
+  context 'resource reference with title as array of resource references with capital letters' do
+    let(:msg) { 'resource reference with title with capital letter' }
+    let(:code) { "file { 'foo': ensure => file, notify => [Title[One], Title[Two],]}" }
 
     it 'should only detect a single problem' do
       expect(problems).to have(1).problem
