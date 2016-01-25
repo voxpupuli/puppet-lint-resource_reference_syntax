@@ -5,7 +5,7 @@ PuppetLint.new_check(:resource_reference_without_title_capital) do
         ['require', 'subscribe', 'notify', 'before', 'consume', 'export'].include? param_token.value
       }.each do |param_token|
         value_token = param_token.next_code_token.next_code_token.next_code_token.next_token
-        unless value_token.type == :SSTRING or value_token.type == :VARIABLE or value_token.next_token.type == :SSTRING
+        unless value_token.type == :SSTRING or value_token.type == :VARIABLE or value_token.type == :DQPRE or value_token.next_token.type == :SSTRING
           notify :error, {
             :message => 'resource reference with title with capital letter',
             :line    => value_token.line,
