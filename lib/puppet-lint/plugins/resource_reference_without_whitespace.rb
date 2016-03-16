@@ -4,13 +4,26 @@ PuppetLint.new_check(:resource_reference_without_whitespace) do
       resource[:param_tokens].select { |param_token|
         ['require', 'subscribe', 'notify', 'before', 'consume', 'export'].include? param_token.value
       }.each do |param_token|
-        value_token = param_token.next_code_token.next_code_token.next_token
-        if value_token.type != :LBRACK
-          notify :error, {
-            :message => 'whitespce between reference type and title',
-            :line    => param_token.next_code_token.next_code_token.line,
-            :column  => param_token.next_code_token.next_code_token.column
-          }
+        value_token = param_token.next_code_token
+        check = value_token.next_token
+        until check.nil?
+          case value_token.next_token.type
+          when :CLASSREF
+            begin
+              if value_token.next_token.next_token.type == :WHITESPACE
+                notify :error, {
+                  :message => 'whitespce between reference type and title',
+                  :line    => param_token.next_code_token.next_code_token.line,
+                  :column  => param_token.next_code_token.next_code_token.column
+                }
+              end
+              value_token = value_token.next_token
+              check = value_token.next_token
+            end
+          else
+            value_token = value_token.next_token
+            check = value_token.next_token
+          end
         end
       end
     end
