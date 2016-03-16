@@ -13,8 +13,8 @@ PuppetLint.new_check(:resource_reference_without_whitespace) do
               if value_token.next_token.next_token.type == :WHITESPACE
                 notify :error, {
                   :message => 'whitespce between reference type and title',
-                  :line    => param_token.next_code_token.next_code_token.line,
-                  :column  => param_token.next_code_token.next_code_token.column
+                  :line    => value_token.next_token.next_token.line,
+                  :column  => value_token.next_token.next_token.column
                 }
               end
               value_token = value_token.next_token
