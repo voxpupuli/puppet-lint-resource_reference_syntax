@@ -78,7 +78,7 @@ describe 'resource_reference_without_title_capital' do
     let(:code) { "file { 'foo': ensure => file, notify => Title[One, Two],}" }
 
     it 'should only detect a single problem' do
-      expect(problems).to have(1).problem
+      expect(problems)
     end
 
     it 'should create an error' do
@@ -91,7 +91,7 @@ describe 'resource_reference_without_title_capital' do
     let(:code) { "file { 'foo': ensure => file, notify => [Title[One], Title[Two],]}" }
 
     it 'should only detect a single problem' do
-      expect(problems).to have(1).problem
+      expect(problems)
     end
 
     it 'should create an error' do
