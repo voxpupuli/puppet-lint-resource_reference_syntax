@@ -1,0 +1,21 @@
+language: ruby
+sudo: false
+cache: bundler
+script:
+- bundle exec rake spec
+rvm:
+- 1.9.3
+- 2.0.0
+- 2.1.5
+matrix:
+  fast_finish: true
+deploy:
+  provider: rubygems
+  api_key:
+    secure: "B6WGj+yhd+86ZlmTgFFX1ZlrjdM54aTqsgL82OPB42MG7wO/2vArLtLm9t4zkvkprYxV9v8hJvupKvmlGAZAKu70wB5uFEPmPpwIdH4TdAbPWcROGmu2ej0iEFbONUwG/wqcUC9HfEVuy1XNxCurFJGrBWjN0MhtWzbqjSRdHNY="
+  on:
+    rvm: 2.1.5
+    tags: true
+    all_branches: true
+notifications:
+email: false
