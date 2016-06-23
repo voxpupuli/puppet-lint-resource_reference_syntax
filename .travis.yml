@@ -11,8 +11,6 @@ matrix:
   fast_finish: true
 deploy:
   provider: rubygems
-  api_key:
-    secure: ECw550egOWFsiP6V2hCBEmcUef5N7WsIcRSom4B8Z3XRpxiYKVpww6bPXyG9l5fPhwEfnGebh7FJ6K1LHe8p19kB4JOh117yG0ijaNfpptQC5iaNEEjKsuzM4aqFhVYNBl3ogrhdfBhfb5qK2a2Cciffejte/rH8SVi2vR3TS6Om3W7/ZrtiYtvJ/gnoNzREAdR2mqg/qmHfDwwsyPjeczDtb2fNwfY6koaqpal6tQZR03IpGi/YcMDb/oxFEW9I37JY7UrQ7f/RpTSPEzu1O0orMkObGA3O3XapXxcbj7swdu5Dr2LN1Tz0JUV81FWYpiroqdecBd9bAQq5WKOG7X8thTTOnqNGCy8eLLBvA/xNiUBLYKdFwfnR+TcjNC3h2v8/jUxS5VQaBYAl7ahppa6P2SNdRNoB0CEIsUIGPWjeaO/npsmGa7HT2KeyzheQQkO50lzS2DVpGRnS4+7+oYwyhdTx4rdqhyBTDe6/YDU0+A+A4VQ0dE3XqeRIAUj9W5k275oXVq+PYhMXOrdllFH6fjdmtrRIuSXDU9ZmsL8JG8yp0ASsnOkDemmYaotgTLrZrhCo1luAnfpkmAv8BL/HNAFf+zbPvSMzSHh6BynWLAwnyFN+7hi2PP9K+dftEoYfhw8U2RdM+sXMMA8gMrysorIvJ3q12uywu77KcLc=
   on:
     rvm: 2.1.5
     tags: true
