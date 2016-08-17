@@ -100,7 +100,7 @@ describe 'resource_reference_without_title_capital' do
   end
 
   context 'resource reference with title without quotes' do
-    let(:msg) { 'resource reference with title with capital letter' }
+    let(:msg) { 'resource reference with title with missing quotes' }
     let(:code) { "file { 'foo': ensure => file, notify => Title[one],}" }
 
     it 'should only detect a single problem' do

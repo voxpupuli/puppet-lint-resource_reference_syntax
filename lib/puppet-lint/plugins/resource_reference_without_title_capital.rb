@@ -12,9 +12,15 @@ PuppetLint.new_check(:resource_reference_without_title_capital) do
             begin
               if value_token.next_token.next_token.type == :LBRACK
                 check_token = value_token.next_token.next_token.next_token
-                if check_token.type == :CLASSREF or check_token.type == :NAME
+                if check_token.type == :CLASSREF
                   notify :error, {
                     :message => 'resource reference with title with capital letter',
+                    :line    => check_token.line,
+                    :column  => check_token.column
+                  }
+                elsif check_token.type == :NAME
+                  notify :error, {
+                    :message => 'resource reference with title with missing quotes',
                     :line    => check_token.line,
                     :column  => check_token.column
                   }
