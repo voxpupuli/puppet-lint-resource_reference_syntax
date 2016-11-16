@@ -6,7 +6,7 @@ PuppetLint.new_check(:resource_reference_without_whitespace) do
       }.each do |param_token|
         value_token = param_token.next_code_token
         check = value_token.next_token
-        until check.nil?
+        until resource[:param_tokens].include? check or not resource[:tokens].include? check or check.nil?
           case value_token.next_token.type
           when :CLASSREF
             begin
