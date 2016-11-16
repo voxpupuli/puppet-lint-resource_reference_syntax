@@ -62,7 +62,6 @@ describe 'resource_reference_without_whitespace' do
     it 'should detect no problem' do
       expect(problems).to have(0).problem
     end
- 
   end
 
 end

@@ -112,4 +112,13 @@ describe 'resource_reference_without_title_capital' do
     end
   end
 
+  context 'stay within the parameter context' do
+    let(:msg) { 'whitespace between reference type and title' }
+    let(:code) { "file { 'foo': ensure => file, notify => Title['One'],} $var = [ Exec[runsomething] ]" }
+
+    it 'should detect no problem' do
+      expect(problems).to have(0).problem
+    end
+  end
+
 end
