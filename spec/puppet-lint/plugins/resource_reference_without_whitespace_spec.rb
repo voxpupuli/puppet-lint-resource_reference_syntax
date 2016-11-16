@@ -56,7 +56,6 @@ describe 'resource_reference_without_whitespace' do
   end
 
   context 'stay within the parameter context' do
-    let(:msg) { 'whitespace between reference type and title' }
     let(:code) { "package { 'bar': ensure => installed,}  exec { 'baz': require => Package['bar'],} File { 'foo': ensure => file,}" }
 
     it 'should detect no problem' do
