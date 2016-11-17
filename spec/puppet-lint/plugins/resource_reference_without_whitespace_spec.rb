@@ -55,4 +55,12 @@ describe 'resource_reference_without_whitespace' do
     end
   end
 
+  context 'stay within the parameter context' do
+    let(:code) { "package { 'bar': ensure => installed,}  exec { 'baz': require => Package['bar'],} File { 'foo': ensure => file,}" }
+
+    it 'should detect no problem' do
+      expect(problems).to have(0).problem
+    end
+  end
+
 end
