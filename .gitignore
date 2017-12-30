@@ -2,3 +2,5 @@
 Gemfile.lock
 vendor
 puppet-lint-resource_reference_syntax-*.gem
+coverage
+

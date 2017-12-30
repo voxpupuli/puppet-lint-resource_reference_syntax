@@ -56,10 +56,23 @@ describe 'resource_reference_without_whitespace' do
   end
 
   context 'stay within the parameter context' do
-    let(:code) { "package { 'bar': ensure => installed,}  exec { 'baz': require => Package['bar'],} File { 'foo': ensure => file,}" }
+    let(:code) { "package { 'bar': ensure => installed,}  exec { 'baz': require => Package['bar'],} file { 'foo': ensure => file,}" }
 
     it 'should detect no problem' do
       expect(problems).to have(0).problem
+    end
+  end
+
+  context 'a whitespace between reference and bracket on chains' do
+    let(:msg) { 'whitespce between reference type and title' }
+    let(:code) { "package { 'one': ensure => present, } Package ['one'] ~> Service ['two']" }
+
+    it 'should detect three problems' do
+      expect(problems).to have(2).problem
+    end
+
+    it 'should create an error' do
+      expect(problems).to contain_error(msg).on_line(1)
     end
   end
 
