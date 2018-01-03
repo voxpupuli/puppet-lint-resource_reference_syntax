@@ -1,3 +1,4 @@
+require 'pry'
 PuppetLint.new_check(:resource_reference_without_whitespace) do
   def check
     resource_indexes.each do |resource|
@@ -7,8 +8,9 @@ PuppetLint.new_check(:resource_reference_without_whitespace) do
         check = param_token
         case check.type
         when :CLASSREF
+#          binding.pry
           begin
-            if check.next_token.type == :WHITESPACE
+            if check.next_token.type == :WHITESPACE and check.next_code_token.type == :LBRACK
               notify :error, {
                 :message => 'whitespce between reference type and title',
                 :line    => check.line,
