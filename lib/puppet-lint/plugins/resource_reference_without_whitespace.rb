@@ -1,3 +1,4 @@
+# Check for resource references
 PuppetLint.new_check(:resource_reference_without_whitespace) do
   def check
     resource_indexes.each do |resource|
