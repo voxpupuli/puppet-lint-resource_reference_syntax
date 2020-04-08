@@ -99,19 +99,6 @@ describe 'resource_reference_without_title_capital' do
     end
   end
 
-  context 'resource reference with title without quotes' do
-    let(:msg) { 'resource reference with title with missing quotes' }
-    let(:code) { "file { 'foo': ensure => file, notify => Title[one],}" }
-
-    it 'should only detect a single problem' do
-      expect(problems).to have(1).problem
-    end
-
-    it 'should create an error' do
-      expect(problems).to contain_error(msg).on_line(1)
-    end
-  end
-
   context 'stay within the parameter context' do
     let(:code) { "file { 'foo': ensure => file, notify => Title['One'],} $var = [ Exec[runsomething] ]" }
 
