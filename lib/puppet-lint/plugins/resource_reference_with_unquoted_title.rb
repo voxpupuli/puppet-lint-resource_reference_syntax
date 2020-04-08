@@ -34,8 +34,6 @@ PuppetLint.new_check(:resource_reference_with_unquoted_title) do
   end
 
   def fix(problem)
-    if problem[:message] == 'unquoted title in resource reference'
-      problem[:token].type = :SSTRING
-    end
+    problem[:token].type = :SSTRING
   end
 end
