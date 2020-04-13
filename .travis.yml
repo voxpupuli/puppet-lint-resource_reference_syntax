@@ -3,17 +3,25 @@ sudo: false
 cache: bundler
 script:
 - bundle exec rake spec
-rvm:
-- 2.0.0
-- 2.1.5
-- 2.4.2
 matrix:
   fast_finish: true
+  include:
+  - rvm: 2.0.0
+    bundler_args: --without release
+  - rvm: 2.1.5
+    bundler_args: --without release
+  - rvm: 2.4.2
+    bundler_args: --without release
 deploy:
   provider: rubygems
   on:
     rvm: 2.1.5
     tags: true
     all_branches: true
-notifications: 
-email: false
+notifications:
+  email: false
+  irc:
+    on_success: always
+    on_failure: always
+    channels:
+      - "chat.freenode.org#voxpupuli-notifications"
