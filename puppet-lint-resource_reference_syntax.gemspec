@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-resource_reference_syntax'
-  spec.version     = '1.0.14'
+  spec.version     = '1.1.0'
   spec.homepage    = 'https://github.com/voxpupuli/puppet-lint-resource_reference_syntax'
   spec.license     = 'APL2'
   spec.author      = 'Martin Alfke'
@@ -22,6 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec-its', '~> 1.0'
   spec.add_development_dependency 'rspec-collection_matchers', '~> 1.0'
-  spec.add_development_dependency 'rake', '~> 0'
-  spec.add_development_dependency 'simplecov', '~> 0'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'simplecov'
 end

@@ -7,6 +7,10 @@ rvm:
 - 2.0.0
 - 2.1.5
 - 2.4.2
+- 2.5
+- 2.6
+- 2.7
+bundler_args: --without release
 matrix:
   fast_finish: true
 deploy:
@@ -15,5 +19,10 @@ deploy:
     rvm: 2.1.5
     tags: true
     all_branches: true
-notifications: 
-email: false
+notifications:
+  email: false
+  irc:
+    on_success: always
+    on_failure: always
+    channels:
+      - "chat.freenode.org#voxpupuli-notifications"
