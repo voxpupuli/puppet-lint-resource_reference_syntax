@@ -2,8 +2,7 @@
 
 [![License](https://img.shields.io/github/license/voxpupuli/puppet-lint-resource_reference_syntax.svg)](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/blob/master/LICENSE)
 [![Test](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/actions/workflows/test.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/actions/workflows/test.yml)
-[![Release](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/actions/workflows/release.ym
-l)
+[![Release](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/actions/workflows/release.yml)
 [![RubyGem Version](https://img.shields.io/gem/v/puppet-lint-resource_reference_syntax.svg)](https://rubygems.org/gems/puppet-lint-resource_reference_syntax)
 [![RubyGem Downloads](https://img.shields.io/gem/dt/puppet-lint-resource_reference_syntax.svg)](https://rubygems.org/gems/puppet-lint-resource_reference_syntax)
 [![Donated by example42](https://img.shields.io/badge/donated%20by-example42-fb7047.svg)](#transfer-notice)
