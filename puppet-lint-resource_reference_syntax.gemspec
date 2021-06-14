@@ -2,9 +2,9 @@ Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-resource_reference_syntax'
   spec.version     = '1.1.0'
   spec.homepage    = 'https://github.com/voxpupuli/puppet-lint-resource_reference_syntax'
-  spec.license     = 'APL2'
-  spec.author      = 'Martin Alfke'
-  spec.email       = 'ma@example42.com'
+  spec.license     = 'Apache-2.0'
+  spec.author      = 'Vox Pupuli'
+  spec.email       = 'voxpupuli@groups.io'
   spec.files       = Dir[
     'README.md',
     'LICENSE',
