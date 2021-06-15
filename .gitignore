@@ -1,6 +1,5 @@
-.bundle
-Gemfile.lock
-vendor
-puppet-lint-resource_reference_syntax-*.gem
-coverage
+/.bundle/
+/vendor/gems/
+/Gemfile.lock
+vendor/bundle
 .vendor/
