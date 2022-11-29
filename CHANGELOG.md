@@ -2,7 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.0](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/tree/1.1.0) (2020-04-13)
+## [1.2.0](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/tree/1.2.0) (2022-11-29)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/compare/1.1.0...1.2.0)
+
+**Implemented enhancements:**
+
+- puppet-lint: Allow 3.x [\#24](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/pull/24) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- cleanup README.md/gemspec [\#21](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/pull/21) ([bastelfreak](https://github.com/bastelfreak))
+
+## [1.1.0](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/tree/1.1.0) (2020-04-14)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/compare/1.0.14...1.1.0)
 
