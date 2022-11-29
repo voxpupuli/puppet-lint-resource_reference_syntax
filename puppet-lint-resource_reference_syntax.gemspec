@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
     '.rspec',
     'lib/**/*',
     'spec/**/*',
+    'CHANGELOG.md',
   ]
   spec.test_files  = Dir['spec/**/*']
   spec.summary     = 'puppet-lint reference_syntax check'
