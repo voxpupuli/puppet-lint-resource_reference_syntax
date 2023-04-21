@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-resource_reference_syntax'
-  spec.version     = '1.2.0'
+  spec.version     = '2.0.0'
   spec.homepage    = 'https://github.com/voxpupuli/puppet-lint-resource_reference_syntax'
   spec.license     = 'Apache-2.0'
   spec.author      = 'Vox Pupuli'
