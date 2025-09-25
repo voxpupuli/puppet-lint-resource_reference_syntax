@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/tree/3.0.0) (2025-09-25)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/compare/2.0.0...3.0.0)
+
+**Breaking changes:**
+
+- Require Ruby 3.2+ & puppet-lint 5.1+ [\#34](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/pull/34) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [2.0.0](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/tree/2.0.0) (2023-04-21)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-resource_reference_syntax/compare/1.2.0...2.0.0)
